@@ -1,0 +1,4 @@
+<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="CostSuite.Modules.Bim3D.Rendering.Viewport3DControl">
+</UserControl>
