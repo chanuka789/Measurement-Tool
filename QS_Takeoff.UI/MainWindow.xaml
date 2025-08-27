@@ -13,7 +13,9 @@
             <TabItem Header="Notes" />
             <TabItem Header="Subcontracts" />
             <TabItem Header="Batches" />
-            <TabItem Header="Dimensions" />
+            <TabItem Header="Dimensions">
+                <Button Content="Add Dimension Group" Margin="10" Click="OpenDimensionGroupProperties_Click"/>
+            </TabItem>
             <TabItem Header="BIDs" />
             <TabItem Header="Layers" />
         </TabControl>
