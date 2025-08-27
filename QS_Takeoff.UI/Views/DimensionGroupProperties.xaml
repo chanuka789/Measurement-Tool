@@ -1,0 +1,90 @@
+<Window x:Class="QS_Takeoff.UI.Views.DimensionGroupProperties"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="Dimension Group Properties" Height="450" Width="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Name -->
+        <TextBlock Grid.Row="0" Text="Name:" Margin="0,0,5,5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="NameTextBox" Margin="0,0,0,5"/>
+
+        <!-- Folder -->
+        <TextBlock Grid.Row="1" Text="Folder:" Margin="0,0,5,5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="FolderTextBox" Margin="0,0,0,5"/>
+
+        <!-- Measurement Type -->
+        <TextBlock Grid.Row="2" Text="Measurement Type:" Margin="0,0,5,5" VerticalAlignment="Center"/>
+        <ComboBox Grid.Row="2" Grid.Column="1" Name="MeasurementTypeCombo" Margin="0,0,0,5"/>
+
+        <!-- Default Display -->
+        <TextBlock Grid.Row="3" Text="Default Display:" Margin="0,0,5,5" VerticalAlignment="Center"/>
+        <ComboBox Grid.Row="3" Grid.Column="1" Name="DefaultDisplayCombo" Margin="0,0,0,5"/>
+
+        <!-- Default Multiplier -->
+        <TextBlock Grid.Row="4" Text="Default Multiplier:" Margin="0,0,5,5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Name="MultiplierTextBox" Margin="0,0,0,5" Text="1.000000"/>
+
+        <!-- Default Width -->
+        <TextBlock Grid.Row="5" Text="Default Width:" Margin="0,0,5,5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Name="WidthTextBox" Margin="0,0,0,5" Text="0.0000"/>
+        <TextBlock Grid.Row="5" Grid.Column="2" Text="m" Margin="5,0" VerticalAlignment="Center"/>
+
+        <!-- Default Height -->
+        <TextBlock Grid.Row="6" Text="Default Height:" Margin="0,0,5,5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="6" Grid.Column="1" Name="HeightTextBox" Margin="0,0,0,5" Text="0.0000"/>
+        <TextBlock Grid.Row="6" Grid.Column="2" Text="m" Margin="5,0" VerticalAlignment="Center"/>
+
+        <!-- Default Depth -->
+        <TextBlock Grid.Row="7" Text="Default Depth:" Margin="0,0,5,5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="7" Grid.Column="1" Name="DepthTextBox" Margin="0,0,0,5" Text="0.0000"/>
+        <TextBlock Grid.Row="7" Grid.Column="2" Text="m" Margin="5,0" VerticalAlignment="Center"/>
+
+        <!-- Add to GFA -->
+        <TextBlock Grid.Row="8" Text="Add To GFA:" Margin="0,0,5,5" VerticalAlignment="Center"/>
+        <CheckBox Grid.Row="8" Grid.Column="1" Name="AddToGfaCheck" Margin="0,0,0,5"/>
+
+        <!-- Positive Dimensions -->
+        <TextBlock Grid.Row="9" Text="Positive Dimensions:" Margin="0,0,5,5" VerticalAlignment="Center"/>
+        <ComboBox Grid.Row="9" Grid.Column="1" Name="PositiveColorCombo" Margin="0,0,5,5" Width="100"/>
+        <ComboBox Grid.Row="9" Grid.Column="3" Name="PositiveStyleCombo" Margin="0,0,0,5" Width="100"/>
+
+        <!-- Negative Dimensions -->
+        <TextBlock Grid.Row="10" Text="Negative Dimensions:" Margin="0,0,5,5" VerticalAlignment="Center"/>
+        <ComboBox Grid.Row="10" Grid.Column="1" Name="NegativeColorCombo" Margin="0,0,5,5" Width="100"/>
+        <ComboBox Grid.Row="10" Grid.Column="3" Name="NegativeStyleCombo" Margin="0,0,0,5" Width="100"/>
+
+        <!-- Weight UOM -->
+        <TextBlock Grid.Row="11" Text="Weight UOM:" Margin="0,0,5,5" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="11" Grid.Column="1" Name="WeightUomTextBox" Margin="0,0,0,5"/>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="12" Grid.ColumnSpan="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Name="InsertButton" Content="Insert" Width="75" Margin="0,0,5,0" Click="Insert_Click"/>
+            <Button Name="CancelButton" Content="Cancel" Width="75" Click="Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
