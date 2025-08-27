@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="GeometryEngine.cpp" />
+    <ClCompile Include="MeshOperations.cpp" />
+    <ClCompile Include="IfcParser.cpp" />
+    <ClCompile Include="DxfParser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeometryEngine.h" />
+    <ClInclude Include="MeshOperations.h" />
+  </ItemGroup>
+</Project>

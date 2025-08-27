@@ -1,0 +1,51 @@
+<Window x:Class="QS_Takeoff.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
+        xmlns:views="clr-namespace:QS_Takeoff.UI.Views"
+        mc:Ignorable="d"
+        Title="QS Takeoff" Height="600" Width="900">
+    <DockPanel>
+        <ribbon:Ribbon DockPanel.Dock="Top">
+            <ribbon:RibbonTab Header="Drawing">
+                <ribbon:RibbonGroup Header="Files">
+                    <ribbon:RibbonButton Label="Open"/>
+                    <ribbon:RibbonButton Label="Save"/>
+                </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup Header="View">
+                    <ribbon:RibbonButton Label="2D"/>
+                    <ribbon:RibbonButton Label="3D"/>
+                </ribbon:RibbonGroup>
+            </ribbon:RibbonTab>
+            <ribbon:RibbonTab Header="Dimensions">
+                <ribbon:RibbonGroup Header="Measure">
+                    <ribbon:RibbonButton Label="Length"/>
+                    <ribbon:RibbonButton Label="Area"/>
+                </ribbon:RibbonGroup>
+            </ribbon:RibbonTab>
+            <ribbon:RibbonTab Header="Revisions" />
+            <ribbon:RibbonTab Header="Worksheets" />
+        </ribbon:Ribbon>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
+
+            <views:ProjectExplorer Grid.Column="0"/>
+            <views:Viewer2D Grid.Column="1"/>
+            <views:PropertiesPanel Grid.Column="2"/>
+
+            <views:BoqGrid Grid.Row="1" Grid.ColumnSpan="3"/>
+        </Grid>
+    </DockPanel>
+</Window>
+
