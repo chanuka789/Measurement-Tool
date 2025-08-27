@@ -3,10 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d">
-    <Grid>
-        <Border BorderBrush="Gray" BorderThickness="1" Margin="5">
-            <TextBlock Text="3D Viewer" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+             mc:Ignorable="d"
+             x:Name="Root">
+    <Grid DataContext="{Binding ElementName=Root}">
+        <Border BorderBrush="Gray" BorderThickness="1" Margin="5" Padding="4">
+            <StackPanel>
+                <TextBlock Text="3D Viewer" HorizontalAlignment="Center" />
+                <ItemsControl ItemsSource="{Binding ModelParts}" />
+            </StackPanel>
         </Border>
     </Grid>
 </UserControl>
