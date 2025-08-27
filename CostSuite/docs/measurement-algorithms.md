@@ -1,3 +1,0 @@
-# Measurement Algorithms
-
-Placeholder.
