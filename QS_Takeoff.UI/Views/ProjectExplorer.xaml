@@ -5,18 +5,21 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Drawings" FontWeight="Bold" Margin="5" />
+        <!-- Dimension groups section -->
+        <TextBlock Text="Dimensions" FontWeight="Bold" Margin="5" />
+        <ListBox Grid.Row="1" ItemsSource="{Binding DimensionGroups}" Margin="5" />
 
-        <TextBox x:Name="FilterBox" Grid.Row="1" Margin="5" Text="Filter" Foreground="Gray"
+        <!-- Drawing section -->
+        <TextBlock Grid.Row="2" Text="Drawings" FontWeight="Bold" Margin="5" />
+
+        <TextBox x:Name="FilterBox" Grid.Row="3" Margin="5" Text="Filter" Foreground="Gray"
                  GotFocus="FilterBox_GotFocus" LostFocus="FilterBox_LostFocus" />
 
-        <ListBox Grid.Row="2" Margin="5">
-            <ListBoxItem Content="A-101 - Floor Plan" />
-            <ListBoxItem Content="A-201 - Sections" />
-            <ListBoxItem Content="S-001 - General Notes" />
-        </ListBox>
+        <ListBox Grid.Row="4" ItemsSource="{Binding Drawings}" Margin="5" />
     </Grid>
 </UserControl>
